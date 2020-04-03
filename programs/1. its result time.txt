@@ -1,0 +1,23 @@
+Q.) Its result time
+
+Arundhathi is a very brilliant girl. She has completed her Mathemtics exam. 
+Mathematics is her favourite subject. She is eagerly waiting for her marks. 
+Her mathematics professor, Mr.Ben need to upload the mark of student. 
+Can you help him out for the same. 
+He needs to provide the id of a student and his/ her mark along with that.
+
+inputs:
+case 1        case 2
+132575        132574
+98            85
+
+
+program:
+
+#include<iostream>
+int main()
+{
+  int Id,Totalmarks;
+  std::cin>>Id>>Totalmarks;
+  std::cout<<"Id : "<<Id<<"\nTotalmarks : "<<Totalmarks;
+}

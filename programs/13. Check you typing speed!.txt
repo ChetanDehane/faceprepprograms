@@ -1,0 +1,34 @@
+Check you typing speed!
+
+
+Cicily is organizing a typing competition. Each participant who clears the competition 
+receives a certificate and a cash prize. The initial mark is ten. For each mistake made, 
+one mark is reduced. If the participant's score is an absolute value, he/she will be 
+rewarded. Can you help Cicily to write a program where she enters the id of a participant 
+and the score obtained, and the program should print the result for that candidate.
+Id and marks is of integer type.
+
+
+inputs:
+
+case 1      case 2     case 3
+132575      132574     22145
+-5          1          3
+
+
+
+program:
+
+#include<iostream>
+int main()
+{
+  int sd_id,marks;
+  std::cin>>sd_id>>marks;
+  if(marks>0)
+  {
+    std::cout<<sd_id<<" is eligible for reward.";
+  
+}
+  return 0;
+ 
+}    

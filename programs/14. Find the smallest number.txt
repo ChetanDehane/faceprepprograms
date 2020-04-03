@@ -1,0 +1,32 @@
+Find the smallest number
+
+
+Dora is in first grade. Her brother Darwin wants her sister to participate in Math 
+Olympiad. Darwin gives two numbers to Dora. She has to tell the smallest number among 
+them. Can you create a program for the same.
+Input should be two integers.
+
+inputs:
+
+case 1       case 2        case 3
+45           45            565
+84           56            53565
+
+
+program:
+
+#include<iostream>
+int main()
+{
+  int a,b;
+  std::cin>>a>>b;
+  if(a<b)
+  {
+    std::cout<<a<<" is smallest number";
+  }
+  else
+  {
+    std::cout<<b<<" is smallest number";
+  }
+  return 0;
+}

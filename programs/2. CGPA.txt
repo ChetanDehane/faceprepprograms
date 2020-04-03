@@ -1,0 +1,42 @@
+CGPA
+Hermoine is a very brilliant girl. She has completed her Semester exam. 
+She is eagerly waiting for her CGPA. 
+Her class adviser, Mr.Tom need to upload the CGPA of the student. 
+Can you help him out for the same. He needs to display the CGPA of a student.
+
+
+Input Format:
+
+The input contains float which denotes the CGPA.
+
+Output Format:
+
+The output contains float which denotes the CGPA.
+
+Sample Input:
+
+4.3
+
+Sample Output:
+
+4.3
+
+inputs:
+
+case 1           case 2        case 3
+4.3              5.77          6.1234
+
+
+program:
+
+#include<iostream>
+int main()
+{
+  float CGPA;
+  std::cin>>CGPA;
+  std::cout<<CGPA;
+}
+
+
+
+

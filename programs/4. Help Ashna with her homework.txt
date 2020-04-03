@@ -1,0 +1,34 @@
+Help Ashna with her homework
+
+Ashna is a third grade school going school.Miss Benzy is a very strict teacher and 
+she teaches math to all the students. On the first day of academic year, 
+Miss Benzy gave her a homework to find sum, difference, product, quotient 
+and remainder of the two numbers given by her. 
+Can you help Ashna by writing a program for the same.
+
+The input should consist of two integers.
+
+inputs:
+
+case 1         case 2       case 3 
+3              8            12
+2              10           15
+
+
+
+
+program:
+
+
+#include<iostream>
+int main()
+{
+  int a,b,c,d,e,f,g;
+  std::cin>>a>>b;
+  c=a+b;
+  d=a-b;
+  e=a*b;
+  f=a/b;
+  g=a%b;
+  std::cout<<"a+b="<<c<<"\na-b="<<d<<"\na*b="<<e<<"\na/b="<<f<<"\na%b="<<g;
+}

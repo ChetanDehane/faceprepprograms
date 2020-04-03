@@ -1,0 +1,54 @@
+Will Lucy get the pass to Narnia?
+Lucy has entered to Narnia through the wardrobe. Once she enters to Narnia, she is encountered with a genie. Genie takes care of Narnia from trespassers. As Genie finds Lucy to be genuine, Genie allows Lucy to enter Narnia if she answers his question. He gives Lucy two numbers and asks her to perform the basic arithmetic operation like addition, subtraction etc. She need to perform the same and tell the answer. If she tells right answer, she gets the pass to Narnia.
+The input should consists of two integers and the operation to be performed which should be corresponding integer. Print the Menu as
+
+1.Addition(+)
+2.Subtraction(-)
+3.Multiplication(*)
+4.Division(/)
+5.Remainder(%)
+
+
+
+inputs:
+
+case 1          case 2       case 3
+25              54           50
+45              80           25
+1               2            6
+
+
+
+
+
+program:
+
+#include<iostream>
+int main()
+{
+ int a,b,c,d,e,f,g,menu;
+  std::cout<<"Enter first number : Enter second number : Menu\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Remainder\n";
+  std::cin>>a>>b>>menu;
+  switch(menu)
+  {
+    case 1: c=a+b;
+            std::cout<<c;
+            break;
+    case 2: d=a-b;
+            std::cout<<d;
+            break;
+   case 3: e=a*b;
+            std::cout<<e;
+            break;
+   case 4: f=a/b;
+            std::cout<<f;
+            break;
+   case 5: g=a%b;
+            std::cout<<g;
+            break;
+   default : std::cout<<"Invalid operation";
+            break;
+  }
+  return 0;
+}
+      
