@@ -1,0 +1,84 @@
+Cricket
+
+Tom is crazy about cricket. He was watching India vs. Australia World cup final match. 
+Australia won the toss and elected to bat first. They finished batting with a score of X. 
+Next, India started to bat and scored Y runs in N number of balls. As Tom is very crazy, 
+he wants to calculate the run rate and check whether there is a probability for India to 
+win or not. Help him calculate the run-rate and check the probability.
+
+INPUT FORMAT & OUTPUT FORMAT:
+
+Input consists of 4 integers. First input corresponds to the total number of balls. 
+Second input corresponds to the total number of runs. 
+Third input corresponds to the number of runs scored. 
+Fourth input corresponds to the number of balls bowled. 
+First output corresponds to the total number of overs. 
+Second output corresponds to the total number of overs finished. 
+Third output corresponds to the current run rate. 
+Fourth output corresponds to total run rate.
+
+Overs: 50 Overs finished: 7.3 Current Run rate: 10.7 Total Run rate: 7.5 Eligible to Win
+
+SAMPLE INPUT:
+
+300
+
+375
+
+78
+
+45
+
+SAMPLE OUTPUT:
+
+50
+
+7.3
+
+10.7
+
+7.5
+
+Eligible to Win
+
+
+
+inputs:
+
+case 1           case 2          case 3
+300              300             300
+375              268             456
+78               23              54
+45               45              76
+
+
+
+program:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+  int total_balls,total_runs,run_scored,ball_bowled;
+  cin>>total_balls>>total_runs>>run_scored>>ball_bowled;
+  int overs=total_balls/6;
+  int over_finish=ball_bowled/6;
+  int a=ball_bowled%6;
+  float over_finished=over_finish+(0.1*a);
+  float total_run_rate=(float)total_runs/overs;
+  float current_run_rate=(float)run_scored/over_finished;
+  cout<<overs<<"\n"<<over_finished<<"\n"<<fixed<<setprecision(1)<<current_run_rate<<"\n"<<fixed<<setprecision(1)<<total_run_rate<<"\n";
+  if(current_run_rate>=total_run_rate)
+  {
+   cout<<"Eligible to Win"; 
+  }
+  else
+  {
+    cout<<"Not Eligible to Win";
+  }
+  return 0;
+}
+
+
+
