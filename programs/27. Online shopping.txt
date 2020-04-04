@@ -1,0 +1,80 @@
+Online shopping
+
+
+Arun wants to buy a shirt. As he is very lazy, he decided to buy the shirt online. 
+He chooses a shirt in Flipkart and is surprised to see the same shirt in Amazon and 
+Snapdeal as well. So he decided to buy the shirt from the website which offers it at the 
+least price. The price of the shirt, discount % and the shipping charges of all three 
+websites have been given as input. Help him in calculating the price of the shirt in each
+website and decide which website has the lowest price.
+
+INPUT & OUTPUT FORMAT:
+
+Input consist of 9 integers. First three input corresponds to Flipkart details such as the amount of the shirt, discount offered and shipping charges. Next three input corresponds to Snapdeal details such as the amount of shirt, discount offered and shipping charge. Last three input corresponds to amazon details such as the amount of shirt, discount offered and shipping charge.
+
+SAMPLE INPUT:
+
+1000
+
+50
+
+50
+
+900
+
+50
+
+70
+
+800
+
+10
+
+200
+
+SAMPLE OUTPUT:
+
+In Flipkart: Rs.550
+
+In Snapdeal: Rs.520
+
+In Amazon: Rs.920
+
+He will prefer Snapdeal
+
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int a1,b1,c1,a2,b2,c2,a3,b3,c3;               /* a,b,c are amount of shirt,discount,shipping prize
+                                                where 1,2,3,are from flipkart,snapdeal and amazon*/
+  cin>>a1>>b1>>c1>>a2>>b2>>c2>>a3>>b3>>c3;
+  
+  int finalprize1=(a1-(a1*b1/100)+c1);
+  int finalprize2=(a2-(a2*b2/100)+c2);
+  int finalprize3=(a3-(a3*b3/100)+c3);
+  cout<<"In Flipkart Rs."<<finalprize1<<endl;
+  cout<<"In Snapdeal Rs."<<finalprize2<<endl;
+  cout<<"In Amazon Rs."<<finalprize3<<endl;
+  
+  
+  if(finalprize1<=finalprize2&&finalprize1<=finalprize3)
+  {
+    cout<<"He will prefer Flipkart";
+  }
+  else if(finalprize2<=finalprize3)
+  {
+    cout<<"He will prefer Snapdeal";
+  }
+  
+  else
+  {
+    cout<<"He will prefer Amazon";
+  }
+  
+  return 0;
+ 
+}

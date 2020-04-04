@@ -1,0 +1,55 @@
+Game with shapes
+
+Karl loves to play with shapes and his sister is interested in Mathematics. 
+They got a wooden box which is square in shape with length x cm and a round bangle with 
+radius r cm and decided to play with it. They started playing and his sister asked him 
+to find whether the circle will fit into the square. Help Karl to find whether the circle
+will fit into a square or not. If the circle fits, display “circle can be inside a square” 
+else display “circle cannot be inside a square”.
+
+INPUT FORMAT:
+
+Input consist of 2 integers.
+
+First input corresponds to the radius of a circle.
+
+Second input corresponds to the length of a square.
+
+SAMPLE INPUT: 
+
+77
+
+65
+
+SAMPLE OUTPUT: 
+
+circle cannot be inside a square
+
+inputs:
+
+case 1           case 2        case 3 
+77               65            24
+65               45            48
+
+
+
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int radius,length_square;
+  cin>>radius>>length_square;
+  int diameter = 2*radius;
+  if(diameter<=length_square)
+  {
+   cout<<"circle can be inside a square"; 
+  }
+  else
+  {
+   cout<<"circle cannot be inside a square"; 
+  }
+  return 0;
+}
