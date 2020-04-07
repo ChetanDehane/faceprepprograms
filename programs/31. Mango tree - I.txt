@@ -1,0 +1,86 @@
+Mango tree - I
+
+
+Dora is so much interested in gardening and hence she plants more trees in her garden. 
+She plants trees in a rectangular fashion with the order of rows and columns and numbers 
+the trees in a row-wise order. She planted the mango tree only in the 1st row, 1st column
+and last column. So, given the tree number, your task is to find out whether the given 
+tree is a mango tree or not? Now, write a program to check whether the given number 
+denotes a mango tree or not.
+
+INPUT FORMAT:
+
+Input consists of 3 integers.
+
+The first input denotes the number of rows.
+
+The second input denotes the number of columns.
+
+The third input denotes the tree number.
+
+OUTPUT FORMAT:
+
+If the given number is a mango tree, print "Yes". Otherwise, print "No"
+
+Refer the sample output for formatting.
+
+SAMPLE INPUT:
+
+5
+
+5
+
+11
+
+SAMPLE OUTPUT:
+
+Yes
+
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int no_rows,no_columns,tree_no,i;
+  cin>>no_rows>>no_columns>>tree_no;
+  int total_tree=no_rows*no_columns;
+  int last_row=no_columns;
+  int first_row=no_columns-(no_columns-1);
+  
+  /* to check tree no from 1st column  */
+  
+    for(i=1;i<=total_tree;i+=no_columns)
+    {
+      if(tree_no==i)
+      {
+        cout<<"Yes";
+        return 0;
+      }
+    }
+  
+  /* to check tree no from last column  */
+  
+   for(i=no_columns;i<=total_tree;i+=no_columns)
+    {
+      if(tree_no==i)
+      {
+        cout<<"Yes";
+        return 0;
+      }
+      
+    }
+  
+  /* to check tree no from 1st row  */
+  
+  if(tree_no>=first_row&&tree_no<=last_row)
+  {
+    cout<<"Yes";
+  }
+  else
+  {
+    cout<<"No";
+  }
+  return 0;
+}

@@ -1,0 +1,166 @@
+Time sheet
+
+
+Jeevitha just started to work as a programming trainer for UIT's Placement Cell. She is 
+paid Rs.100 an hour, with a few exceptions. She earns an extra Rs.15 an hour for any part
+of a day where she works for more than 8 hours, and an extra Rs.25 an hour for hours 
+beyond 40 in any one week. Also, she earns a 25% bonus for working on Saturdays and a 50% 
+bonus for working on Sundays. The bonuses for Saturday and Sunday are computed based on 
+the hours worked on those days. And there is no bonus for working more than 40 hours in 
+a week. You'll be given the number of hours Jeevitha worked on each day in a week 
+(Sunday, Monday, ..., Saturday), and you need to compute her salary for the week.
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of 7 integers less than or equal to 24 on separate lines
+
+Print Jeevith's salary for a week.
+
+SAMPLE INPUT:
+
+0
+
+8
+
+8
+
+8
+
+10
+
+6
+
+0
+
+SAMPLE OUTPUT:
+
+4030
+
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+
+  int d1,d2,d3,d4,d5,d6,d7,day1,day2,day3,day4,day5,day6,day7,hr;
+  cin>>d7>>d1>>d2>>d3>>d4>>d5>>d6;
+  int total_hr=d1+d2+d3+d4+d5+d6+d7;
+  {
+  if(d1<=8)
+  {
+    day1=d1*100;
+  }
+  else if(d1>8)
+    {
+      hr=d1-8;
+    if(total_hr<=40)
+    {
+      day1=(d1*100)+(hr*15);
+    }
+     else if(total_hr>40)
+        {
+          day1=(d1*100)+(hr*25);
+        }
+   }
+  }
+
+{
+  if(d2<=8)
+  {
+    day2=d2*100;
+  }
+  else if(d2>8)
+    {
+      hr=d2-8;
+    if(total_hr<=40)
+    {
+      day2=(d2*100)+(hr*15);
+    }
+     else if(total_hr>40)
+        {
+          day2=(d2*100)+(hr*25);
+        }
+    }
+}
+{
+  if(d3<=8)
+  {
+    day3=d3*100;
+  }
+  else if(d3>8)
+    {
+      hr=d3-8;
+    if(total_hr<=40)
+    {
+      day3=(d3*100)+(hr*15);
+    }
+     else if(total_hr>40)
+        {
+          day3=(d3*100)+(hr*25);
+        }
+    }
+}
+{
+  if(d4<=8)
+  {
+    day4=d4*100;
+  }
+  else if(d4>8)
+    {
+      hr=d4-8;
+    if(total_hr<=40)
+    {
+      day4=(d4*100)+(hr*15);
+    }
+     else if(total_hr>40)
+        {
+          day4=(d4*100)+(hr*25);
+        }
+    }
+}
+{
+   if(d5<=8)
+  {
+    day5=d5*100;
+  }
+  else if(d5>8)
+    {
+      hr=d5-8;
+    if(total_hr<=40)
+    {
+      day5=(d5*100)+(hr*15);
+    }
+    else if(total_hr>40)
+        {
+          day5=(d5*100)+(hr*25);
+        }
+    }
+}
+  {
+  if(total_hr<=40) 
+  {
+   day6=(d6*100)+(d6*100*25/100);
+  }
+    else
+    {
+      day6=0;
+    }
+  }
+  {
+  if(total_hr<=40)
+  {
+     day7=(d7*100)+(d7*100*50/100);
+  }
+    else
+    {
+      day7=0;
+    }
+  }
+
+   int total_work=day1+day2+day3+day4+day5+day6+day7;
+
+   cout<<total_work;
+  return 0;
+}
