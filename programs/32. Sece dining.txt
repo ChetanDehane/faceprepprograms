@@ -57,27 +57,23 @@ int main()
     {
       cout<<"Left Handed";
     }
-    else if(rail==2)
+    else
     {
       cout<<"Right Handed";
     }
   }
-  else if(door=="rear")
+  else 
   {
-    if(rail==2)
-    {
-      cout<<"Left Handed";
-    }
-    else if(rail==1)
+    if(rail==1)
     {
       cout<<"Right Handed";
+    }
+    else
+    {
+      cout<<"Left Handed";
     }
   }
   
  
   return 0;
 }
-
-
-
-/*  if your program pass all cases comment me although program is right according to me ... sorry for bad english*/
