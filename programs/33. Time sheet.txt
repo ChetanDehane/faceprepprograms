@@ -46,7 +46,7 @@ int main()
 
   int d1,d2,d3,d4,d5,d6,d7,day1,day2,day3,day4,day5,day6,day7,hr;
   cin>>d7>>d1>>d2>>d3>>d4>>d5>>d6;
-  int total_hr=d1+d2+d3+d4+d5+d6+d7;
+  int total_hr=d1+d2+d3+d4+d5;
   {
   if(d1<=8)
   {
@@ -164,3 +164,4 @@ int main()
    cout<<total_work;
   return 0;
 }
+
