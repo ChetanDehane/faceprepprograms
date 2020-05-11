@@ -1,0 +1,50 @@
+Perfect numbers in the range
+
+Write a program to find the perfect numbers between a given range.
+
+Input Format:
+
+The first input contains an integer which denotes the starting number of the range
+
+The second input contains an integer which denotes the ending number of the range
+
+Output Format:
+
+Print the perfect numbers in a given range
+
+Sample Input:
+
+1
+
+10
+
+Sample Output:
+
+6
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int r1,r2,i,j,a,sum=0;
+  cin>>r1>>r2;
+  for(i=r1;i<=r2;i++)
+  {
+    for(j=1;j<i;j++)
+    {
+      a=i%j;
+      if(a==0)
+      {
+         sum=sum+j;
+      }
+    }
+      if(sum==i)
+      {
+        cout<<i<<" ";
+      }
+    sum=0;
+  }
+  return 0;
+}

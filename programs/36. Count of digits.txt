@@ -1,0 +1,40 @@
+Count of digits
+
+Sara is studying in 2nd standard and she has to play event in her school. 
+The number is displayed on the screen and she has to count the number of 
+digits in the displayed number. 
+Can you help her by writing the program for the above scenario?
+
+Input Format:
+
+The input consist of an integer
+
+Output Format:
+
+Print the number of digits in the given number
+
+Sample Input:
+
+1234
+
+Sample Output:
+
+4
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int n,a,i=0;
+  cin>>n;
+  do
+  {
+    a=n%10;
+    i++;
+    n=n/10;
+  }while(n>0);
+ 
+  cout<<i;
+}
