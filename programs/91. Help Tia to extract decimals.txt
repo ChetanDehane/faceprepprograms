@@ -1,0 +1,28 @@
+Help Tia to extract decimals
+
+Tia is new to programming. She needs to write a program which will receive the input as a floating point number. 
+She needs to print the decimal part of the floating point of the number. She has written a few lines of code. 
+Can you fill up the rest.
+Read the input as string. Use string operations on the input to derive the answer easily.
+
+Input (stdin)
+-955.444
+
+Output (stdout)
+Floating part is : 444
+
+
+program:
+
+#include<iostream>
+#include<string>
+int main() 
+{ 
+	std::string fnum;
+	getline(std::cin,fnum);
+    int found=fnum.find(".");
+    int f1=fnum.length();
+    std::string str;
+    str.assign(fnum.begin()+found+1,fnum.end());
+    std::cout<<"Floating part is : "<<str;
+}

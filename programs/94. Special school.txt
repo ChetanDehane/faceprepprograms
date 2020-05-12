@@ -1,0 +1,65 @@
+Special school
+
+A special school is run by an NGO for kids with Dyslexia. We all know these children will start writing the 
+letters backward or in reverse. Once special care is taken to correct this issue and once they are introduced to words, 
+they will start writing the words in the proper format. The teachers do not want to discourage the children at the start 
+itself and they have decided to mark the words written in reverse also as correct. Can you please help the teacher in 
+correcting the answer sheets by writing a C++ program? Write a C++ program to check whether the second word is the 
+reverse of the first word. Do not use strrev() function.
+
+Input Format:
+
+Input consists of 2 strings. 
+
+Assume that the maximum length of the string is 50.
+
+Output format:
+
+Refer sample input and output for formatting specifications.
+
+Sample input &output
+
+Excellent
+
+tnellecxE
+
+It is correct
+
+
+program:
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string str1,str2;
+    int i,end,count=0,flag=0;
+    cin>>str1>>str2;
+    while(str1[count]!='\0')
+    {
+        count++;
+    }
+    end=count-1;
+    for (i=0;i<count;i++) 
+    {
+        if(str1[i]==str2[end])
+        {
+            end--;
+          flag=0;
+        }
+      else
+      {
+        flag=1;
+        break;
+      }
+    }
+  if(flag==0)
+  {
+    cout<<"It is correct";
+  }
+  else
+  {
+    cout<<"It is wrong";
+  }    
+   return 0; 
+}

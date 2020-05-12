@@ -1,0 +1,162 @@
+College
+
+Create a structure called College. struct College { char name[100]; char city[100]; int establishmentYear; 
+float passPercentage; } Write a program to get the details of 'n' colleges and to display their details, 
+sorted by name in ascending order.
+
+INPUT & OUTPUT FORMAT:
+
+Refer sample input and output for formatting specification.
+
+All float values are displayed corrected to 2 decimal places.
+
+SAMPLE INPUT & OUTPUT:
+
+Enter the number of colleges
+
+3
+
+Enter the details of college 1
+
+Enter name
+
+ACE
+
+Enter city
+
+Coimbatore
+
+Enter year of establishment
+
+2000
+
+Enter pass percentage
+
+98.5
+
+Enter the details of college 2
+
+Enter name
+
+BCE
+
+Enter city
+
+Erode
+
+Enter year of establishment
+
+1990
+
+Enter pass percentage
+
+89.45
+
+Enter the details of college 3
+
+Enter name
+
+DCE
+
+Enter city
+
+Chennai
+
+Enter year of establishment
+
+2008
+
+Enter pass percentage
+
+97.35
+
+Details of colleges
+
+College 1
+
+Name : ACE
+
+City : Coimbatore
+
+Year of establishment : 2000
+
+Pass percentage : 98.50
+
+College 2
+
+Name : BCE
+
+City : Erode
+
+Year of establishment : 1990
+
+Pass percentage : 89.45
+
+College 3
+
+Name : DCE
+
+City : Chennai
+
+Year of establishment : 2008
+
+Pass percentage : 97.35
+
+
+
+program:
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+struct college
+{
+  char name[100],city[100];
+  int establishmentyear;
+  float passpercentage;
+};
+int main()
+{
+  int n,i,j,count=1;
+  cout<<"Enter the number of colleges"<<endl;
+  cin>>n;
+  college c[n];
+  college t;
+   for(i=0;i<n;i++)
+   {
+    cout<<"Enter the details of college "<<count<<endl;
+    cout<<"Enter name"<<endl;
+    cin>>c[i].name;
+    cout<<"Enter city"<<endl;
+    cin>>c[i].city;
+    cout<<"Enter year of establishment"<<endl;
+    cin>>c[i].establishmentyear;
+    cout<<"Enter pass percentage"<<endl;
+    cin>>c[i].passpercentage;
+     
+    count++;
+   }
+  
+   for(i=0;i<n;i++)
+     {
+          for(j=i+1;j<n;j++)
+          {
+               if(strcmp(c[i].name,c[j].name)>0)
+               {
+                    t=c[i];
+                    c[i]=c[j];
+                    c[j]=t;
+               }
+          }
+     }  
+  
+    count=1;
+    cout<<"Details of colleges"<<endl;
+    for(i=0;i<n;i++)
+    {
+    cout<<"College:"<<count<<endl;
+    cout<<"Name:"<<c[i].name<<endl<<"City:"<<c[i].city<<endl<<"Year of establishment:"<<c[i].establishmentyear<<endl<<"Pass percentage:"<<c[i].passpercentage<<endl;
+    count++;
+    }
+    return 0;
+}

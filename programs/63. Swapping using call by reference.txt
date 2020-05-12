@@ -1,0 +1,33 @@
+Swapping using call by reference
+
+Read two integers as input and swap them using call by reference, without using a third variable.
+
+Input (stdin)
+6 5
+
+Output (stdout)
+Before swapping a= 6 and b=5
+After swapping a= 5 and b=6
+
+program:
+
+#include<iostream>
+using namespace std;
+void swap(int &a,int &b)
+{ 
+  int temp;
+  temp=a;
+  a=b;
+  b=temp;
+}
+
+int main()
+{
+  int n1,n2;
+  cin>>n1>>n2;
+  cout<<"Before swapping a= "<<n1<<" and b="<<n2<<endl;
+  swap(n1,n2);
+  cout<<"After swapping a= " <<n1<<" and b="<<n2<<endl;
+  return 0;
+}
+

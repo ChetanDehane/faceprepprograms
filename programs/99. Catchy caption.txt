@@ -1,0 +1,56 @@
+Catchy caption
+
+Company Tesla has kept a contest for catchy caption for the image. They have a rule that the caption should 
+not be more than 10 words. If the caption of a candidate is more than 10 words, then the candidature stands to 
+be disqualified. Can you write a program to check whether a caption is eligible for the contest or not.
+The maximum sizeof the caption is of 100 bytes.
+
+
+
+[Hint:Use functions defined in cstring]
+
+Input (stdin)
+Tide's In - Dirt's Out
+
+Output (stdout)
+Caption eligible for the contest
+
+
+program:
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+   char caption[100];
+   cin.getline(caption,100);
+   int length=strlen(caption);
+   string a={"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+  int count=0;
+   for(int i=0;i<length;i++)
+   {
+     for(int j=0;j<a.length();j++)
+     {
+      if(caption[i]==a[j])
+      {
+        count++;
+        break;
+      }
+       else
+       {
+         continue;
+       }
+     }
+   }
+  
+   if(count<=20)
+  {
+    cout<<"Caption eligible for the contest";
+  }
+  else
+  {
+    cout<<"Caption not eligible for the contest";
+  }  
+    return 0;
+}

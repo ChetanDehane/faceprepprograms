@@ -1,0 +1,107 @@
+Student details
+
+Jeeva is the chairman of ABC university and he is planned to improve students education. So he is conducted meeting 
+for all departments HODs. Write a program to help all department HODs to display student details. 
+Create a structure called Student. struct Student { char name[30]; char department[20]; int yearOfStudy; float cgpa; }; 
+Write a program to get the details of 'n' students and to display their details, sorted in ascending order based on 
+the name.
+
+INPUT & OUTPUT FORMAT:
+
+Refer sample input and output for formatting specification.
+
+All float values are displayed corrected to 2 decimal places. 
+
+SAMPLE INPUT & OUTPUT:
+
+Enter the number of students
+
+1
+
+Enter the details of student 1
+
+Enter name
+
+krish
+
+Enter department
+
+mca
+
+Enter year of study
+
+3
+
+Enter cgpa
+
+7.6
+
+Details of students
+
+Student 1
+
+Name : krish
+
+Department : mca
+
+Year of study : 3
+
+CGPA : 7.6
+
+
+program:
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+struct student
+{
+  char name[30],department[20];
+  int yearofstudy;
+  float cgpa;
+};
+int main()
+{
+  int n,i,j,count=1;
+  cout<<"Enter the number of students"<<endl;
+  cin>>n;
+  student s[n];
+  student t;
+   for(int i=0;i<n;i++)
+   {
+    cout<<"Enter the details of student "<<count<<endl;
+    cout<<"Enter name"<<endl;
+    cin>>s[i].name;
+    cout<<"Enter department"<<endl;
+    cin>>s[i].department;
+    cout<<"Enter year of study"<<endl;
+    cin>>s[i].yearofstudy;
+    cout<<"Enter cgpa"<<endl;
+    cin>>s[i].cgpa;
+     
+    count++;
+   }
+  
+   for(i=0;i<n;i++)
+     {
+          for(j=i+1;j<n;j++)
+          {
+               if(strcmp(s[i].name,s[j].name)>0)
+               {
+                    t=s[i];
+                    s[i]=s[j];
+                    s[j]=t;
+               }
+          }
+     }  
+  
+    count=1;
+    cout<<"Details of students"<<endl;
+    for(int i=0;i<n;i++)
+    {
+    cout<<"Student "<<count<<endl;
+    cout<<"Name:"<<s[i].name<<endl<<"Department:"<<s[i].department<<endl<<"Year of study:"<<s[i].yearofstudy<<endl<<"CGPA:"<<s[i].cgpa<<endl;
+    count++;
+    }
+    return 0;
+}

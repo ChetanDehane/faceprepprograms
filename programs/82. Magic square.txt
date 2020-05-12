@@ -1,0 +1,111 @@
+Magic square
+
+A magic square is an arrangement of numbers (usually integers) in a square grid, there numbers in the forward and 
+backward main diagonals, all add up to the same number. Write a program to find whether a given matrix is a magic 
+square or not.
+
+Input Format:
+
+The input consists of (n*n+1) integers. 
+
+The first integer corresponds to the number of rows/columns in the matrix. 
+
+The remaining integers correspond to the elements in the matrix. 
+
+The elements are read in row-wise order, the first row first, then second row and so on. 
+
+Assume that the maximum value of m and n is 5.
+
+Output Format:
+
+Print yes if it is a magic square. Print no if it is not a magic square.
+
+Sample Input:
+
+2
+
+4 5
+
+5 4
+
+Sample Output:
+
+No
+
+
+program:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int m,i,j;
+  cin>>m;
+  int a[m][m];
+  for(i=0;i<m;i++)
+  {
+    for(j=0;j<m;j++)
+    {
+    cin>>a[i][j];
+    }
+  }
+
+/* 
+
+  int rowsum=0;
+  for(i=0;i<m;i++)
+  {
+    rowsum=a[i][0];
+    for(j=1;j<m;j++)
+    {
+     rowsum=rowsum+a[i][j];
+    }
+  }
+  
+  int columnsum=0;
+  for(i=0;i<m;i++)
+  {
+    columnsum=a[0][i];
+    for(j=1;j<m;j++)
+    {
+     columnsum=columnsum+a[j][i];
+    }
+  }
+  
+  if(rowsum==columnsum)
+  {
+   cout<<"Yes";
+  }
+  else
+  {
+   cout<<"No";
+  }
+ 
+  
+*/ 
+  
+  int d1sum=0;
+  for(i=0;i<m;i++)
+    {
+     d1sum=d1sum+a[i][i];
+    }
+  
+   int d2sum=0;
+  for(i=0;i<m;i++)
+    {
+     d2sum=d2sum+a[i][m-1-i];
+    }
+  
+  if(d1sum==d2sum)
+  {
+    cout<<"Yes";
+  }
+  else
+  {
+    cout<<"No";
+  }
+  return 0;
+}
+
+
+        

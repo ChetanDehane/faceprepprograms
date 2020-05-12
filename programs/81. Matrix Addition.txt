@@ -1,0 +1,102 @@
+Matrix Addition
+
+Raju has a square shaped puzzle made up of small square pieces containing numbers on them. He wants to rearrange 
+the puzzle by changing the element of a row into a column element and column element into a row element without 
+altering the shape of the puzzle. Help raju to solve this puzzle. FUNCTIONAL REQUIREMENTS: int** createArray(int,int); 
+int getElement(int**,int,int); int addMatrix(int**,int**,int**,int,int);
+
+Input Format:
+
+Enter the row and column of a matrix Enter the matrix
+
+Output Format:
+
+Addition of a matrix
+
+Sample Input:
+
+2
+
+2
+
+1
+
+2
+
+3
+
+4
+
+1
+
+2
+
+3
+
+4
+
+Sample Output:
+
+2 4
+
+6 8
+
+
+program:
+
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int i,j;
+int** createArray(int r,int c)
+{
+  int **a=(int **)malloc(r*sizeof(int*));
+  for(i=0;i<r;i++)
+  *(a+i)=(int *)malloc(c*sizeof(int));
+  return a;
+}
+int getElement(int **a,int **b,int r,int c)
+{
+ for(i=0;i<r;i++)
+{
+  for(j=0;j<c;j++)
+  {
+   cin>>a[i][j];
+  }
+}
+for(i=0;i<r;i++)
+{
+  for(j=0;j<c;j++)
+  {
+    cin>>b[i][j];
+  }
+} 
+}
+
+int addMatrix(int **a,int **b,int **sum,int r,int c)
+{
+  for(i=0;i<r;i++)
+   {
+    for(j=0;j<c;j++)
+     {
+       sum[i][j]=a[i][j]+b[i][j];
+      cout<<sum[i][j]<<" ";
+     }
+     cout<<"\n";
+   }
+}
+
+int main()
+{
+  int **a;
+  int **b;
+  int **sum;
+  int r,c;
+  cin>>r>>c;
+  a=createArray(r,c);
+  b=createArray(r,c);
+  sum=createArray(r,c);
+  getElement(a,b,r,c);
+  addMatrix(a,b,sum,r,c);
+  return 0;
+}

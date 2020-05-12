@@ -1,0 +1,86 @@
+Counting
+
+These days kids are introduced to computers at a very early age. The kids are taught about alphabets, digits and 
+blank spaces. The teacher asked the students to count the vowels, consonants, digits and white spaces in a string. 
+The teacher found it a bit difficult to evaluate these tests and she knew that the 12th class students are learning 
+C programming. So she assigned this task to them to count the vowels, consonants, digits and white spaces in a string. 
+Can you please help them out? Write a program to count the vowels, consonants, digits, white spaces, and symbols 
+in a string.
+
+Input &output Format:
+
+Input consists of a string. Assume the maximum length of the string is 200. The characters in the string can 
+contain both uppercase and lowercase. Refer sample input and output for formatting specifications.
+
+Sample Input:
+
+This program is very easy 2 complete
+
+Sample Output:
+
+Vowels : 10
+
+Consonants : 19
+
+White spaces : 6
+
+Digits : 1
+
+Symbols : 0
+
+
+program:
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+  string a;
+  getline(cin,a);
+  string vowels={"aeiouAEIOU"},consonants={"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVXZWY"},digits={"0123456789"},symbols={"~?.,!@#$%^&*-=+/':;"};
+  int i,j,vowel=0,digit=0,symbol=0,consonant=0;
+  
+  for(i=0;i<a.length();i++)
+  {
+    for(j=0;j<vowels.length();j++)
+    {
+      if(a[i]==vowels[j])
+      {
+        vowel++;
+        goto l;
+      }
+    }
+    for(j=0;j<symbols.length();j++)
+    {
+      if(a[i]==symbols[j])
+      {
+        symbol++;
+        goto l;
+      }
+    }
+    for(j=0;j<digits.length();j++)
+    {
+      if(a[i]==digits[j])
+      {
+        digit++;
+        goto l;
+      }
+    }
+    
+     for(j=0;j<consonants.length();j++)
+    {
+      if(a[i]==consonants[j])
+      {
+        consonant++;
+        goto l;
+      }
+    }
+   l: ;
+}
+  
+  
+  int whitespaces=a.length()-(vowel+digit+symbol+consonant);
+  cout<<"Vowels:"<<vowel<<endl<<"Consonants:"<<consonant<<endl<<"White Spaces:"<<whitespaces<<endl<<"Digits:"<<digit<<endl<<"Symbols:"<<symbol;
+  return 0;
+}
